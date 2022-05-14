@@ -20,6 +20,14 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  
+  /*There is equal space on either side of the icon 
+  (the gaps between the icon and the edge of the card, 
+  and the icon and the text, are the same).*/
+  padding: 20px;
+  column-gap: 20px;
+
+  display: flex;
 }
 
 .icon {
@@ -33,6 +41,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  /* This property stops the icon from shrinking */
+  flex: 1 0 auto;
 }
 
 .close-button {
@@ -63,4 +74,21 @@ button.cancel {
   background: white;
   border: 1px solid #ddd;
   color: royalblue;
+}
+
+.modal-right-top{
+  display: flex;
+  /*The close button is vertically aligned with the header, 
+  and aligned in the top-right of the card.*/
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.modal-right{
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
 }
